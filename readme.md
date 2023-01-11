@@ -6,15 +6,16 @@ Base-122 is currently an experimental encoding, and may undergo changes.
 ## Basic Usage ##
 Base-122 encoding produces UTF-8 characters, but encodes more bits per byte than base-64.
 ```javascript
-let base122 = require('./base122');
-let inputData = require('fs').readFileSync('example.jpg')
-let base64Encoded = inputData.toString('base64');
-let base122Encoded = Buffer.from(base122.encode(inputData), 'utf8');
+import { Base122 } from "./Base122.js";
+import { Base64 } from "https://code4fukui.github.io/Base64/Base64.js";
+const inputData = await Deno.readFile("test/example.jpg");
+const base64Encoded = Base64.encode(inputData);
+const base122Encoded = Base122.encode(inputData);
 
 console.log("Original size = " + inputData.length); // Original size = 1429
 console.log("Base-64 size = " + base64Encoded.length); // Base-64 size = 1908
-console.log("Base-122 size = " + base122Encoded.length); // Base-122 size = 1635
-console.log("Saved " + (base64Encoded.length - base122Encoded.length) + " bytes") // Saved 273 bytes
+console.log("Base-122 size = " + base122Encoded.length); // Base-122 size = 1427
+console.log("Saved " + (base64Encoded.length - base122Encoded.length) + " bytes") // Saved 481 bytes
 ```
 
 Note, even though base-122 produces valid UTF-8 characters, control characters aren't always preserved when copy pasting. Therefore, encodings should be saved to files through scripts, not copy-pasting. Here is an example of saving base-122 to a file:
