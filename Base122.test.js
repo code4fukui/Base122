@@ -38,7 +38,7 @@ Deno.test("decode", async () => {
 Deno.test("decode.min.js", async () => {
   const s0to255 = (await import(testfn)).default;
   const bin = d(s0to255);
-  console.log(bin);
+  //console.log(bin);
   t.assertEquals(bin.length, n);
   for (let i = 0; i < bin.length; i++) {
     t.assertEquals(bin[i], i);
