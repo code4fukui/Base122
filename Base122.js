@@ -142,7 +142,7 @@ function print8Bits(num) {
     return "00000000".substring(num.toString(2).length) + num.toString(2);
 }
 
-const encodeJS = (s) => "`" + encode(s).replace(/`/g, '\\`').replace(/\\/g, '\\\\').replace(/\$/g, "\\$") + "`";
+const encodeJSString = (s) => "`" + s.replace(/\\/g, '\\\\').replace(/\$/g, "\\$").replace(/`/g, '\\`') + "`";
+const encodeJS = (s) => encodeJSString(encode(s));
 
 export const Base122 = { encode, decode, encodeJS };
-
