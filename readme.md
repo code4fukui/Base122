@@ -6,7 +6,7 @@ Base-122 is currently an experimental encoding, and may undergo changes.
 ## Basic Usage ##
 Base-122 encoding produces UTF-8 characters, but encodes more bits per byte than base-64.
 ```javascript
-import { Base122 } from "./Base122.js";
+import { Base122 } from "https://code4fukui.github.io/Base122/Base122.js";
 import { Base64 } from "https://code4fukui.github.io/Base64/Base64.js";
 const inputData = await Deno.readFile("test/example.jpg");
 const base64Encoded = Base64.encode(inputData);
