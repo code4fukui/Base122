@@ -43,5 +43,5 @@ export function d(strData) {
           push7(c);
       }
   }
-  return decoded;
+  return new Uint8Array(decoded);
 }

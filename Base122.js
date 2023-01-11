@@ -125,7 +125,7 @@ function decode(base122Data) {
             push7(c);
         }
     }
-    return decoded;
+    return new Uint8Array(decoded);
 }
 
 // For debugging.
