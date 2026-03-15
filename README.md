@@ -1,5 +1,7 @@
 # Base122
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 A space efficient UTF-8 binary-to-text encoding created as an alternative to base-64 in data URIs. Base-122 is ~14% smaller than equivalent base-64 encoded data.
 
 ## Demo
