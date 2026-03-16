@@ -4,13 +4,6 @@
 
 A space efficient UTF-8 binary-to-text encoding created as an alternative to base-64 in data URIs. Base-122 is ~14% smaller than equivalent base-64 encoded data.
 
-## Demo
-The web decoder is included as a proof-of-concept, but base-122 is not recommended for use in web pages.
-
-## Features
-- More compact than base-64 encoding
-- Encodes binary data to valid UTF-8 characters
-
 ## Usage
 Base-122 encoding produces UTF-8 characters, but encodes more bits per byte than base-64.
 ```javascript
@@ -26,4 +19,4 @@ console.log("Saved " + (base64Encoded.length - base122Encoded.length) + " bytes"
 ```
 
 ## License
-Not specified.
+MIT License — see [LICENSE](LICENSE).
